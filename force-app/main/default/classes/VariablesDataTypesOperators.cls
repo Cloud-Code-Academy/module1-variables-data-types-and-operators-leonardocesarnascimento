@@ -193,10 +193,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+        final Integer millisecondsPerMinuteCONS = 60000; // Make this value a constant
         Integer milliseconds;
 
-        milliseconds = minutes * MILLISECONDS_PER_MINUTE;
+        milliseconds = minutes * millisecondsPerMinuteCONS;
 
         return milliseconds; // Replace null with the variable you used to store the result
     }    
@@ -277,13 +277,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return The temperature in Celsius equivalent to the given Fahrenheit temperature.
      */
     public static Double convertFahrenheitToCelsius(Double fahrenheit) {
-        final Double SUBTRACT_FACTOR = 32.0;
-        final Double MULTIPLY_FACTOR = 5.0;
-        final Double DIVIDE_FACTOR = 9.0;
+        final Double substractFACTOR = 32.0;
+        final Double multiplyFACTOR = 5.0;
+        final Double divideFACTOR = 9.0;
 
-        Double Celsius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR/DIVIDE_FACTOR;
+        Double celsius = (fahrenheit - substractFACTOR) * multiplyFACTOR/divideFACTOR;
     
-        return Celsius; // Replace null with the variable you used to store the result
+        return celsius; // Replace null with the variable you used to store the result
     }
 
     
@@ -333,8 +333,8 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         
-        Integer NUMBER_OF_WEEKS = 4;
-        Decimal monthlyPayCheck = (hourlyRate * numberOfHours) * NUMBER_OF_WEEKS;
+        final Integer numberOfWEEKS = 4;
+        Decimal monthlyPayCheck = (hourlyRate * numberOfHours) * numberOfWEEKS;
         return monthlyPayCheck; // Replace null with the variable you used to store the result
     }
 
